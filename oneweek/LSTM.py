@@ -22,16 +22,16 @@ def close(data):
     data = data[['Close']]
 
 # Normalize data
-    scaler = MinMaxScaler()
-    data_scaled = scaler.fit_transform(data)
+scaler = MinMaxScaler()
+data_scaled = scaler.fit_transform(data)
 
 # Create sequences for LSTM
-    def create_sequences(data, seq_length):
-        X, y = [], []
-        for i in range(len(data) - seq_length):
-            X.append(data[i:i + seq_length])
-            y.append(data[i + seq_length])
-        return np.array(X), np.array(y)
+def create_sequences(data, seq_length):
+    X, y = [], []
+    for i in range(len(data) - seq_length):
+        X.append(data[i:i + seq_length])
+        y.append(data[i + seq_length])
+return np.array(X), np.array(y)
 
 seq_length = 7
 X, y = create_sequences(data_scaled, seq_length)

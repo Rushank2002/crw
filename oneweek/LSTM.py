@@ -42,7 +42,7 @@ X_train, X_test = X[:train_size], X[train_size:]
 y_train, y_test = y[:train_size], y[train_size:]
 
 # Reshape X_train for LSTM input (samples, timesteps, features)
-X_train = X_train.reshape(X_train.shape[1], seq_length, 1)
+X_train = X_train.reshape(X_train.shape[0], seq_length, 1)
 
 # Build LSTM model
 model = Sequential()

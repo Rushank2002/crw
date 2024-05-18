@@ -13,7 +13,7 @@ symbols_list = ["BTC-USD",'ETH-USD','BNB-USD','SOL-USD','XRP-USD','DOGE-USD','SB
 
 
 TODAY= date.today().strftime("%Y-%m-%d")
-START = pd.to_datetime(TODAY)-pd.DateOffset(365*8)
+START = pd.to_datetime(TODAY)-pd.DateOffset(365*5)
 
 ticker= st.selectbox("Select company for prediction ", symbols_list)
 # Download the data

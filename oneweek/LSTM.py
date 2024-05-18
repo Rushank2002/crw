@@ -6,7 +6,7 @@ from sklearn.preprocessing import MinMaxScaler
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Dense
 import matplotlib.pyplot as plt
-
+from datetime import date
 # Load Microsoft stock data
 symbols_list = ["BTC-USD",'ETH-USD','BNB-USD','SOL-USD','XRP-USD','DOGE-USD','SBIN.BO']
 
